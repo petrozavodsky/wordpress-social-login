@@ -456,7 +456,7 @@ msgstr ""
 msgid "<strong>Note:</strong> This debugging area can be disabled from the plugin settings by setting <b>Development mode</b> to <b>Disabled</b>"
 msgstr ""
 
-#: includes/widgets/wsl.loading.screens.php:38, includes/widgets/wsl.loading.screens.php:120
+#: includes/widgets/wsl.loading.screens.php:38, includes/widgets/wsl.loading.screens.php:121
 msgid "Redirecting..."
 msgstr ""
 
@@ -464,7 +464,7 @@ msgstr ""
 msgid "Contacting <b>%s</b>, please wait..."
 msgstr ""
 
-#: includes/widgets/wsl.loading.screens.php:187
+#: includes/widgets/wsl.loading.screens.php:188
 msgid "Processing, please wait..."
 msgstr ""
 

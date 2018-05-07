@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Social Login\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-05-07 15:18+0300\n"
+"PO-Revision-Date: 2018-05-07 17:15+0300\n"
 "Last-Translator: Сергей Жигулев <sergori@mail.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/wsl/wordpress-social-login/"
 "language/ru/)\n"
@@ -605,7 +605,7 @@ msgstr ""
 "плагина, выключив <b>Режим разработчика</b>"
 
 #: includes/widgets/wsl.loading.screens.php:38,
-#: includes/widgets/wsl.loading.screens.php:120
+#: includes/widgets/wsl.loading.screens.php:121
 msgid "Redirecting..."
 msgstr "Перенаправление ..."
 
@@ -613,7 +613,7 @@ msgstr "Перенаправление ..."
 msgid "Contacting <b>%s</b>, please wait..."
 msgstr "Соединение с <b>%s</b>, пожалуйста, ожидайте..."
 
-#: includes/widgets/wsl.loading.screens.php:187
+#: includes/widgets/wsl.loading.screens.php:188
 msgid "Processing, please wait..."
 msgstr "Ожидайте..."
 
