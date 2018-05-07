@@ -1,0 +1,20 @@
+{
+  "name": "wordpress-social-login",
+  "version": "1.0.0",
+  "description": "**WordPress Social Login** is a free and open source plugin made by the community, for the community.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "petrozavodsky",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sort": "^2.0.0",
+    "gulp-wp-pot": "^2.3.1"
+  }
+}
