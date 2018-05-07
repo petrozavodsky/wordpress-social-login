@@ -19,7 +19,7 @@ function wsl_component_watchdog()
 {
  	if( ! get_option( 'wsl_settings_debug_mode_enabled' ) )
 	{
-		return _e("<p>Debug mode is disabled.</p>", 'wordpress-social-login');
+		return __("<p>Debug mode is disabled.</p>", 'wordpress-social-login');
 	}
 
 	if( get_option( 'wsl_settings_debug_mode_enabled' ) == 1 )
