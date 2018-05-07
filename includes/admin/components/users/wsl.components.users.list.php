@@ -23,7 +23,7 @@ function wsl_component_users_list()
 	wsl_component_users_delete_social_profiles();
 
 	$actions = array(
-		'edit_details' => '<a class="button button-secondary thickbox" href="' . admin_url( 'users.php?TB_iframe=true&width=1050&height=550' ) . '">' . _wsl__( 'View all your website users', 'wordpress-social-login' ) . '</a>',
+		'edit_details' => '<a class="button button-secondary thickbox" href="' . admin_url( 'users.php?TB_iframe=true&width=1050&height=550' ) . '">' . __( 'View all your website users', 'wordpress-social-login' ) . '</a>',
 	);
 
 	// HOOKABLE:
@@ -41,14 +41,14 @@ function wsl_component_users_list()
 
 		<form method="post">
 			<select name="provider" style="vertical-align: unset;">
-				<option value=""><?php _wsl_e("Provider", 'wordpress-social-login') ?></option>
+				<option value=""><?php _e("Provider", 'wordpress-social-login') ?></option>
 			</select>
-			<input type="text" value="" name="username" placeholder="<?php _wsl_e("Username", 'wordpress-social-login') ?>" style="height: 28px;">
+			<input type="text" value="" name="username" placeholder="<?php _e("Username", 'wordpress-social-login') ?>" style="height: 28px;">
 			<input type="submit" value="Filter" class="button">
 		</form>
 	-->
 
-	<?php _wsl_e( "This screen only list the users who have connected through WordPress Social Login", 'wordpress-social-login' ) ?>.
+	<?php _e( "This screen only list the users who have connected through WordPress Social Login", 'wordpress-social-login' ) ?>.
 </div>
 <?php
 
@@ -63,24 +63,24 @@ function wsl_component_users_list()
 <table cellspacing="0" class="wp-list-table widefat fixed users">
 	<thead>
 		<tr>
-			<th width="100"><span><?php _wsl_e("Providers", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Username", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Full Name", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("E-mail", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Profile URL", 'wordpress-social-login') ?></span></th>
-			<th width="80"><span><?php _wsl_e("Contacts", 'wordpress-social-login') ?></span></th>
-			<th width="55"><span><?php _wsl_e("User ID", 'wordpress-social-login') ?></span></th>
+			<th width="100"><span><?php _e("Providers", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Username", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Full Name", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("E-mail", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Profile URL", 'wordpress-social-login') ?></span></th>
+			<th width="80"><span><?php _e("Contacts", 'wordpress-social-login') ?></span></th>
+			<th width="55"><span><?php _e("User ID", 'wordpress-social-login') ?></span></th>
 		</tr>
 	</thead>
 	<tfoot>
 		<tr>
-			<th width="100"><span><?php _wsl_e("Providers", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Username", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Full Name", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("E-mail", 'wordpress-social-login') ?></span></th>
-			<th><span><?php _wsl_e("Profile URL", 'wordpress-social-login') ?></span></th>
-			<th width="80"><span><?php _wsl_e("Contacts", 'wordpress-social-login') ?></span></th>
-			<th width="55"><span><?php _wsl_e("User ID", 'wordpress-social-login') ?></span></th>
+			<th width="100"><span><?php _e("Providers", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Username", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Full Name", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("E-mail", 'wordpress-social-login') ?></span></th>
+			<th><span><?php _e("Profile URL", 'wordpress-social-login') ?></span></th>
+			<th width="80"><span><?php _e("Contacts", 'wordpress-social-login') ?></span></th>
+			<th width="55"><span><?php _e("User ID", 'wordpress-social-login') ?></span></th>
 		</tr>
 	</tfoot>
 	<tbody data-wp-lists="list:user" id="the-list">
@@ -91,7 +91,7 @@ function wsl_component_users_list()
 			if( ! $users_list )
 			{
 				?>
-					<tr class="no-items"><td colspan="5" class="colspanchange"><?php _wsl_e("No users found", 'wordpress-social-login') ?>.</td></tr>
+					<tr class="no-items"><td colspan="5" class="colspanchange"><?php _e("No users found", 'wordpress-social-login') ?>.</td></tr>
 				<?php
 			}
 			else
@@ -115,7 +115,7 @@ function wsl_component_users_list()
 							foreach( $linked_accounts AS $link )
 							{
 								?>
-									<img src="<?php echo $assets_base_url . strtolower( $link->provider ) . '.png' ?>" style="vertical-align:top;width:16px;height:16px;" /> <?php _wsl_e($link->provider, 'wordpress-social-login') ?><br />
+									<img src="<?php echo $assets_base_url . strtolower( $link->provider ) . '.png' ?>" style="vertical-align:top;width:16px;height:16px;" /> <?php _e($link->provider, 'wordpress-social-login') ?><br />
 								<?php
 
 								if( $link->photourl )
@@ -136,12 +136,12 @@ function wsl_component_users_list()
 
 						<div class="row-actions">
 							<span class="view">
-								<a href="options-general.php?page=wordpress-social-login&wslp=users&uid=<?php echo $user_id ?>"><?php _wsl_e("Profiles", 'wordpress-social-login') ?></a>
+								<a href="options-general.php?page=wordpress-social-login&wslp=users&uid=<?php echo $user_id ?>"><?php _e("Profiles", 'wordpress-social-login') ?></a>
 								|
 							</span>
 
 							<span class="view">
-								<a href="options-general.php?page=wordpress-social-login&wslp=contacts&uid=<?php echo $user_id ?>"><?php _wsl_e("Contacts", 'wordpress-social-login') ?></a>
+								<a href="options-general.php?page=wordpress-social-login&wslp=contacts&uid=<?php echo $user_id ?>"><?php _e("Contacts", 'wordpress-social-login') ?></a>
 								|
 							</span>
 
@@ -149,7 +149,7 @@ function wsl_component_users_list()
 								<?php
 									$delete_url = wp_nonce_url( 'options-general.php?page=wordpress-social-login&wslp=users&delete=' . $user_id );
 								?>
-								<a style="color: #a00;" href="<?php echo $delete_url ?>" onClick="return confirmDeleteWSLUser();"><?php _wsl_e("Delete", 'wordpress-social-login') ?></a>
+								<a style="color: #a00;" href="<?php echo $delete_url ?>" onClick="return confirmDeleteWSLUser();"><?php _e("Delete", 'wordpress-social-login') ?></a>
 							</span>
 						</div>
 					</td>
@@ -208,7 +208,7 @@ function wsl_component_users_list()
 <script>
 	function confirmDeleteWSLUser()
 	{
-		return confirm( <?php echo json_encode( _wsl__("Are you sure you want to delete the user's social profiles and contacts?\n\nNote: The associated WordPress user won't be deleted.", 'wordpress-social-login') ) ?> );
+		return confirm( <?php echo json_encode( __("Are you sure you want to delete the user's social profiles and contacts?\n\nNote: The associated WordPress user won't be deleted.", 'wordpress-social-login') ) ?> );
 	}
 </script>
 <?php
@@ -235,7 +235,7 @@ function wsl_component_users_delete_social_profiles()
 			?>
 				<div class="fade updated" style="margin: 0px 0px 10px;">
 					<p>
-						<?php echo sprintf( _wsl__( "WSL user ID #%d: <b>%s</b>  profiles and contacts has been deleted. Note that the associated WordPress user wasn't deleted", 'wordpress-social-login'), $uid, $user_data->user_login ) ?>.
+						<?php echo sprintf( __( "WSL user ID #%d: <b>%s</b>  profiles and contacts has been deleted. Note that the associated WordPress user wasn't deleted", 'wordpress-social-login'), $uid, $user_data->user_login ) ?>.
 					</p>
 				</div>
 			<?php

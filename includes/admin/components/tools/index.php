@@ -38,7 +38,7 @@ function wsl_component_tools()
 			?>
 				<div style="margin: 4px 0 20px;" class="fade error wsl-error-db-tables">
 					<p>
-						<?php _wsl_e('The URL nonce is not valid', 'wordpress-social-login') ?>! 
+						<?php _e('The URL nonce is not valid', 'wordpress-social-login') ?>!
 					</p>
 				</div>	
 			<?php

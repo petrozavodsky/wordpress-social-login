@@ -133,7 +133,7 @@ function wsl_admin_ui_header( $wslp = null )
 				?>
 					<div class="fade updated" style="margin: 4px 0 20px;">
 						<p>
-							<?php _wsl_e("<b>Note:</b> WSL has detected that you are using a caching plugin. If the saved changes didn't take effect immediately then you might need to empty the cache", 'wordpress-social-login') ?>.
+							<?php _e("<b>Note:</b> WSL has detected that you are using a caching plugin. If the saved changes didn't take effect immediately then you might need to empty the cache", 'wordpress-social-login') ?>.
 						</p>
 					</div>
 				<?php
@@ -145,11 +145,11 @@ function wsl_admin_ui_header( $wslp = null )
 			?>
 				<div class="fade error wsl-error-dev-mode-on" style="margin: 4px 0 20px;">
 					<p>
-						<?php _wsl_e('<b>Warning:</b> You are now running WordPress Social Login with DEVELOPMENT MODE enabled. This mode is not intend for live websites as it might raise serious security risks', 'wordpress-social-login') ?>.
+						<?php _e('<b>Warning:</b> You are now running WordPress Social Login with DEVELOPMENT MODE enabled. This mode is not intend for live websites as it might raise serious security risks', 'wordpress-social-login') ?>.
 					</p>
 					<p>
-						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=tools#dev-mode"><?php _wsl_e('Change this mode', 'wordpress-social-login') ?></a>
-						<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/troubleshooting-advanced.html" target="_blank"><?php _wsl_e('Read about the development mode', 'wordpress-social-login') ?></a>
+						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=tools#dev-mode"><?php _e('Change this mode', 'wordpress-social-login') ?></a>
+						<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/troubleshooting-advanced.html" target="_blank"><?php _e('Read about the development mode', 'wordpress-social-login') ?></a>
 					</p>
 				</div>
 			<?php
@@ -160,12 +160,12 @@ function wsl_admin_ui_header( $wslp = null )
 			?>
 				<div class="fade updated wsl-error-debug-mode-on" style="margin: 4px 0 20px;">
 					<p>
-						<?php _wsl_e('<b>Note:</b> You are now running WordPress Social Login with DEBUG MODE enabled. This mode is not intend for live websites as it might add to loading time and store unnecessary data on your server', 'wordpress-social-login') ?>.
+						<?php _e('<b>Note:</b> You are now running WordPress Social Login with DEBUG MODE enabled. This mode is not intend for live websites as it might add to loading time and store unnecessary data on your server', 'wordpress-social-login') ?>.
 					</p>
 					<p>
-						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=tools#debug-mode"><?php _wsl_e('Change this mode', 'wordpress-social-login') ?></a>
-						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=watchdog"><?php _wsl_e('View WSL logs', 'wordpress-social-login') ?></a>
-						<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/troubleshooting-advanced.html" target="_blank"><?php _wsl_e('Read about the debug mode', 'wordpress-social-login') ?></a>
+						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=tools#debug-mode"><?php _e('Change this mode', 'wordpress-social-login') ?></a>
+						<a class="button-secondary" href="options-general.php?page=wordpress-social-login&wslp=watchdog"><?php _e('View WSL logs', 'wordpress-social-login') ?></a>
+						<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/troubleshooting-advanced.html" target="_blank"><?php _e('Read about the debug mode', 'wordpress-social-login') ?></a>
 					</p>
 				</div>
 			<?php
@@ -173,13 +173,13 @@ function wsl_admin_ui_header( $wslp = null )
 	?>
 
 	<div class="alignright">
-		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="http://miled.github.io/wordpress-social-login/documentation.html"><?php _wsl_e('Docs', 'wordpress-social-login') ?></a> -
-		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="http://miled.github.io/wordpress-social-login/support.html"><?php _wsl_e('Support', 'wordpress-social-login') ?></a> -
-		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="https://github.com/miled/wordpress-social-login"><?php _wsl_e('Github', 'wordpress-social-login') ?></a>
+		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="http://miled.github.io/wordpress-social-login/documentation.html"><?php _e('Docs', 'wordpress-social-login') ?></a> -
+		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="http://miled.github.io/wordpress-social-login/support.html"><?php _e('Support', 'wordpress-social-login') ?></a> -
+		<a style="font-size: 0.9em; text-decoration: none;" target="_blank" href="https://github.com/miled/wordpress-social-login"><?php _e('Github', 'wordpress-social-login') ?></a>
 	</div>
 
 	<h1 <?php if( is_rtl() ) echo 'style="margin: 20px 0;"'; ?>>
-		<?php _wsl_e( 'WordPress Social Login', 'wordpress-social-login' ) ?>
+		<?php _e( 'WordPress Social Login', 'wordpress-social-login' ) ?>
 
 		<small><?php echo $WORDPRESS_SOCIAL_LOGIN_VERSION ?></small>
 	</h1>
@@ -203,7 +203,7 @@ function wsl_admin_ui_header( $wslp = null )
 						}
 					}
 
-					?><a class="nav-tab <?php if( $wslp == $name ) echo "nav-tab-active"; ?>" style="<?php echo $css_pull_right; ?>" href="options-general.php?page=wordpress-social-login&wslp=<?php echo $name ?>"><?php if( isset( $settings["ico"] ) ) echo '<img style="margin: 0px; padding: 0px; border: 0px none;width: 16px; height: 16px;" src="' . WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/' . $settings["ico"] . '" />'; else _wsl_e( $settings["label"], 'wordpress-social-login' ); ?></a><?php
+					?><a class="nav-tab <?php if( $wslp == $name ) echo "nav-tab-active"; ?>" style="<?php echo $css_pull_right; ?>" href="options-general.php?page=wordpress-social-login&wslp=<?php echo $name ?>"><?php if( isset( $settings["ico"] ) ) echo '<img style="margin: 0px; padding: 0px; border: 0px none;width: 16px; height: 16px;" src="' . WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/' . $settings["ico"] . '" />'; else _e( $settings["label"], 'wordpress-social-login' ); ?></a><?php
 				}
 			}
 		?>
@@ -254,23 +254,23 @@ function wsl_admin_ui_error()
 	do_action( "wsl_admin_ui_error_start" );
 ?>
 <div id="wsl_div_warn">
-	<h3 style="margin:0px;"><?php _wsl_e('Oops! We ran into an issue.', 'wordpress-social-login') ?></h3>
+	<h3 style="margin:0px;"><?php _e('Oops! We ran into an issue.', 'wordpress-social-login') ?></h3>
 
 	<hr />
 
 	<p>
-		<?php _wsl_e('Unknown or Disabled <b>Component</b>! Check the list of enabled components or the typed URL', 'wordpress-social-login') ?> .
+		<?php _e('Unknown or Disabled <b>Component</b>! Check the list of enabled components or the typed URL', 'wordpress-social-login') ?> .
 	</p>
 
 	<p>
-		<?php _wsl_e("If you believe you've found a problem with <b>WordPress Social Login</b>, be sure to let us know so we can fix it", 'wordpress-social-login') ?>.
+		<?php _e("If you believe you've found a problem with <b>WordPress Social Login</b>, be sure to let us know so we can fix it", 'wordpress-social-login') ?>.
 	</p>
 
 	<hr />
 
 	<div>
-		<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/support.html" target="_blank"><?php _wsl_e( "Report as bug", 'wordpress-social-login' ) ?></a>
-		<a class="button-primary" href="options-general.php?page=wordpress-social-login&wslp=components" style="float:<?php if( is_rtl() ) echo 'left'; else echo 'right'; ?>"><?php _wsl_e( "Check enabled components", 'wordpress-social-login' ) ?></a>
+		<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/support.html" target="_blank"><?php _e( "Report as bug", 'wordpress-social-login' ) ?></a>
+		<a class="button-primary" href="options-general.php?page=wordpress-social-login&wslp=components" style="float:<?php if( is_rtl() ) echo 'left'; else echo 'right'; ?>"><?php _e( "Check enabled components", 'wordpress-social-login' ) ?></a>
 	</div>
 </div>
 <?php
@@ -304,17 +304,17 @@ function wsl_admin_ui_fail()
 			</p>
 
 			<p>
-				<?php _wsl_e("The minimum server requirements are", 'wordpress-social-login') ?>:
+				<?php _e("The minimum server requirements are", 'wordpress-social-login') ?>:
 			</p>
 
 			<ul style="margin-left:60px;">
-				<li><?php _wsl_e("PHP >= 5.2.0 installed", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("WSL Endpoint URLs reachable", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("PHP's default SESSION handling", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("PHP/CURL/SSL Extension enabled", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("PHP/JSON Extension enabled", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("PHP/REGISTER_GLOBALS Off", 'wordpress-social-login') ?></li>
-				<li><?php _wsl_e("jQuery installed on WordPress backoffice", 'wordpress-social-login') ?></li>
+				<li><?php _e("PHP >= 5.2.0 installed", 'wordpress-social-login') ?></li>
+				<li><?php _e("WSL Endpoint URLs reachable", 'wordpress-social-login') ?></li>
+				<li><?php _e("PHP's default SESSION handling", 'wordpress-social-login') ?></li>
+				<li><?php _e("PHP/CURL/SSL Extension enabled", 'wordpress-social-login') ?></li>
+				<li><?php _e("PHP/JSON Extension enabled", 'wordpress-social-login') ?></li>
+				<li><?php _e("PHP/REGISTER_GLOBALS Off", 'wordpress-social-login') ?></li>
+				<li><?php _e("jQuery installed on WordPress backoffice", 'wordpress-social-login') ?></li>
 			</ul>
 		</div>
 
@@ -365,43 +365,43 @@ function wsl_admin_welcome_panel()
 	//> wsl-w-panel is shamelessly borrowed and modified from wordpress welcome-panel
 -->
 <div id="wsl-w-panel">
-	<a href="options-general.php?page=wordpress-social-login&wslp=<?php echo $wslp ?>&wsldwp=1" id="wsl-w-panel-dismiss" <?php if( is_rtl() ) echo 'style="left: 10px;right: auto;"'; ?>><?php _wsl_e("Dismiss", 'wordpress-social-login') ?></a>
+	<a href="options-general.php?page=wordpress-social-login&wslp=<?php echo $wslp ?>&wsldwp=1" id="wsl-w-panel-dismiss" <?php if( is_rtl() ) echo 'style="left: 10px;right: auto;"'; ?>><?php _e("Dismiss", 'wordpress-social-login') ?></a>
 
 	<table width="100%" border="0" style="margin:0;padding:0;">
 		<tr>
 			<td width="10" valign="top"></td>
 			<td width="300" valign="top">
-				<b style="font-size: 16px;"><?php _wsl_e("Welcome!", 'wordpress-social-login') ?></b>
+				<b style="font-size: 16px;"><?php _e("Welcome!", 'wordpress-social-login') ?></b>
 				<p>
-					<?php _wsl_e("If you are still new to WordPress Social Login, we have provided a few walkthroughs to get you started", 'wordpress-social-login') ?>.
+					<?php _e("If you are still new to WordPress Social Login, we have provided a few walkthroughs to get you started", 'wordpress-social-login') ?>.
 				</p>
 			</td>
 			<td width="40" valign="top"></td>
 			<td width="260" valign="top">
 				<br />
 				<p>
-					<b><?php _wsl_e("Get Started", 'wordpress-social-login') ?></b>
+					<b><?php _e("Get Started", 'wordpress-social-login') ?></b>
 				</p>
 				<ul style="margin-left:25px;">
-					<li><a href="http://miled.github.io/wordpress-social-login/overview.html" target="_blank"><?php _wsl_e('Plugin Overview', 'wordpress-social-login') ?></a></li>
-					<li><a href="http://miled.github.io/wordpress-social-login/networks.html" target="_blank"><?php _wsl_e('Setup and Configuration', 'wordpress-social-login') ?></a></li>
-					<li><a href="http://miled.github.io/wordpress-social-login/widget.html" target="_blank"><?php _wsl_e('Customize WSL Widgets', 'wordpress-social-login') ?></a></li>
-					<li><a href="http://miled.github.io/wordpress-social-login/userdata.html" target="_blank"><?php _wsl_e('Manage users and contacts', 'wordpress-social-login') ?></a></li>
-					<li><a href="http://miled.github.io/wordpress-social-login/documentation.html" target="_blank"><?php _wsl_e('WSL Developer API', 'wordpress-social-login') ?></a></li>
+					<li><a href="http://miled.github.io/wordpress-social-login/overview.html" target="_blank"><?php _e('Plugin Overview', 'wordpress-social-login') ?></a></li>
+					<li><a href="http://miled.github.io/wordpress-social-login/networks.html" target="_blank"><?php _e('Setup and Configuration', 'wordpress-social-login') ?></a></li>
+					<li><a href="http://miled.github.io/wordpress-social-login/widget.html" target="_blank"><?php _e('Customize WSL Widgets', 'wordpress-social-login') ?></a></li>
+					<li><a href="http://miled.github.io/wordpress-social-login/userdata.html" target="_blank"><?php _e('Manage users and contacts', 'wordpress-social-login') ?></a></li>
+					<li><a href="http://miled.github.io/wordpress-social-login/documentation.html" target="_blank"><?php _e('WSL Developer API', 'wordpress-social-login') ?></a></li>
 				</ul>
 			</td>
 			<td width="" valign="top">
 				<br />
 				<p>
-					<b><?php echo sprintf( _wsl__( "What's new on WSL %s", 'wordpress-social-login'), wsl_get_version() ) ?></b>
+					<b><?php echo sprintf( __( "What's new on WSL %s", 'wordpress-social-login'), wsl_get_version() ) ?></b>
 				</p>
 
 				<ul style="margin-left:25px;">
-					<li><?php _wsl_e('Accounts linking/mapping.', 'wordpress-social-login') ?></li>
-					<li><?php _wsl_e('Improved Profile Completion.', 'wordpress-social-login') ?></li>
-					<li><?php _wsl_e('Widget shortcode arguments.', 'wordpress-social-login') ?></li>
-					<li><?php _wsl_e('Added new translations.', 'wordpress-social-login') ?></li>
-					<li><?php _wsl_e('Fix an issue with Facebook users profiles.', 'wordpress-social-login') ?></li>
+					<li><?php _e('Accounts linking/mapping.', 'wordpress-social-login') ?></li>
+					<li><?php _e('Improved Profile Completion.', 'wordpress-social-login') ?></li>
+					<li><?php _e('Widget shortcode arguments.', 'wordpress-social-login') ?></li>
+					<li><?php _e('Added new translations.', 'wordpress-social-login') ?></li>
+					<li><?php _e('Fix an issue with Facebook users profiles.', 'wordpress-social-login') ?></li>
 				</ul>
 			</td>
 		</tr>
@@ -430,7 +430,7 @@ function wsl_admin_help_us_localize_note()
 		<div id="l10n-footer">
 			<br /><br />
 			<img src="<?php echo $assets_url ?>flags.png">
-			<a href="https://www.transifex.com/projects/p/wordpress-social-login/" target="_blank"><?php _wsl_e( "Help us translate WordPress Social Login into your language", 'wordpress-social-login' ) ?></a>
+			<a href="https://www.transifex.com/projects/p/wordpress-social-login/" target="_blank"><?php _e( "Help us translate WordPress Social Login into your language", 'wordpress-social-login' ) ?></a>
 		</div>
 	<?php
 }

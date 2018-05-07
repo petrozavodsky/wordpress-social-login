@@ -101,7 +101,7 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 	{
 		if( $linking_enabled == 2 )
 		{
-			return wsl_process_login_render_notice_page( _wsl__( "Not tonight.", 'wordpress-social-login' ) );
+			return wsl_process_login_render_notice_page( __( "Not tonight.", 'wordpress-social-login' ) );
 		}
 
 		$bouncer_account_linking = true;
@@ -118,7 +118,7 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 			// we give no useful hint.
 			$account_linking_errors[] = 
 								sprintf(
-										_wsl__(
+										__(
 												'<strong>ERROR</strong>: Invalid username or incorrect password. <a href="%s">Lost your password</a>?',
 												'wordpress-social-login'
 										),
@@ -159,17 +159,17 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 			{
 				if ( empty( $requested_user_email ) )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Please type your e-mail address.', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Please type your e-mail address.', 'wordpress-social-login' );
 				}
 
 				if ( ! is_email( $requested_user_email ) )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Please enter a valid email address.', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Please enter a valid email address.', 'wordpress-social-login' );
 				}
 
 				if ( wsl_wp_email_exists( $requested_user_email ) )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Sorry, that email address is already used!', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Sorry, that email address is already used!', 'wordpress-social-login' );
 				}
 			}
 			# }}} validate usermail
@@ -183,27 +183,27 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 
 				if ( in_array( $requested_user_login, $illegal_names ) == true )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: That username is not allowed.', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: That username is not allowed.', 'wordpress-social-login' );
 				}
 
 				if ( strlen( $requested_user_login ) < 4 )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Username must be at least 4 characters.', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Username must be at least 4 characters.', 'wordpress-social-login' );
 				}
 
 				if ( strpos( ' ' . $requested_user_login, '_' ) != false )
 				{
-					// $profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Sorry, usernames may not contain the character &#8220;_&#8221;!', 'wordpress-social-login' );
+					// $profile_completion_errors[] = __( '<strong>ERROR</strong>: Sorry, usernames may not contain the character &#8220;_&#8221;!', 'wordpress-social-login' );
 				}
 
 				if ( preg_match( '/^[0-9]*$/', $requested_user_login ) )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Sorry, usernames must have letters too!', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Sorry, usernames must have letters too!', 'wordpress-social-login' );
 				}
 
 				if ( username_exists( $requested_user_login) )
 				{
-					$profile_completion_errors[] = _wsl__( '<strong>ERROR</strong>: Sorry, that username already exists!', 'wordpress-social-login' );
+					$profile_completion_errors[] = __( '<strong>ERROR</strong>: Sorry, that username already exists!', 'wordpress-social-login' );
 				}
 			}
 			# }}} validate username
@@ -503,8 +503,8 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 
 				<div id="welcome">
 					<img id="idp-icon" src="<?php echo $assets_base_url . strtolower($provider); ?>.png" >
-					<b><?php printf( _wsl__( "Hi %s", 'wordpress-social-login' ), htmlentities( $hybridauth_user_profile->displayName ) ); ?></b>
-					<p><?php printf( _wsl__( "You're now signed in with your %s account but you are still one step away of getting into our website", 'wordpress-social-login' ), $provider ); ?>.</p>
+					<b><?php printf( __( "Hi %s", 'wordpress-social-login' ), htmlentities( $hybridauth_user_profile->displayName ) ); ?></b>
+					<p><?php printf( __( "You're now signed in with your %s account but you are still one step away of getting into our website", 'wordpress-social-login' ), $provider ); ?>.</p>
 
 					<hr />
 				</div>
@@ -513,15 +513,15 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 					<tr>
 						<?php if( $linking_enabled == 1 ): ?>
 							<td valign="top"  width="50%" style="text-align:center;">
-								<h4><?php _wsl_e( "Already have an account", 'wordpress-social-login' ); ?>?</h4>
-								<p style="font-size: 12px;"><?php printf( _wsl__( "Link your existing account on our website to your %s ID.", 'wordpress-social-login' ), $provider ); ?></p>
+								<h4><?php _e( "Already have an account", 'wordpress-social-login' ); ?>?</h4>
+								<p style="font-size: 12px;"><?php printf( __( "Link your existing account on our website to your %s ID.", 'wordpress-social-login' ), $provider ); ?></p>
 							</td>
 						<?php endif; ?>
 
 						<?php if( $registration_enabled == 1 ): ?>
 						<td valign="top"  width="50%" style="text-align:center;">
-							<h4><?php _wsl_e( "New to our website", 'wordpress-social-login' ); ?>?</h4>
-							<p style="font-size: 12px;"><?php printf( _wsl__( "Create a new account and it will be associated with your %s ID.", 'wordpress-social-login' ), $provider ); ?></p>
+							<h4><?php _e( "New to our website", 'wordpress-social-login' ); ?>?</h4>
+							<p style="font-size: 12px;"><?php printf( __( "Create a new account and it will be associated with your %s ID.", 'wordpress-social-login' ), $provider ); ?></p>
 						</td>
 						<?php endif; ?>
 					</tr>
@@ -529,16 +529,16 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 					<tr>
 						<?php if( $linking_enabled == 1 ): ?>
 							<td valign="top"  width="50%" style="text-align:center;">
-								<input type="button" value="<?php _wsl_e( "Link my account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="display_mapping_authenticate();" >
+								<input type="button" value="<?php _e( "Link my account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="display_mapping_authenticate();" >
 							</td>
 						<?php endif; ?>
 
 						<?php if( $registration_enabled == 1 ): ?>
 						<td valign="top"  width="50%" style="text-align:center;">
 							<?php if( ( $require_email != 1 || ! empty( $hybridauth_user_email_verified ) ) && $change_username != 1 && $extra_fields != 1 ): ?>
-								<input type="button" value="<?php _wsl_e( "Create a new account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="document.getElementById('info-form').submit();" >
+								<input type="button" value="<?php _e( "Create a new account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="document.getElementById('info-form').submit();" >
 							<?php else : ?>
-								<input type="button" value="<?php _wsl_e( "Create a new account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="display_mapping_complete_info();" >
+								<input type="button" value="<?php _e( "Create a new account", 'wordpress-social-login' ); ?>" class="button-primary" onclick="display_mapping_complete_info();" >
 							<?php endif; ?>
 						</td>
 						<?php endif; ?>
@@ -577,28 +577,28 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 						<table id="mapping-authenticate" border="0">
 							<tr>
 								<td valign="top"  width="50%" style="text-align:center;">
-									<h4><?php _wsl_e( "Already have an account", 'wordpress-social-login' ); ?>?</h4>
+									<h4><?php _e( "Already have an account", 'wordpress-social-login' ); ?>?</h4>
 
-									<p><?php printf( _wsl__( "Please enter your username and password of your existing account on our website. Once verified, it will linked to your %s ID", 'wordpress-social-login' ), ucfirst( $provider ) ) ; ?>.</p>
+									<p><?php printf( __( "Please enter your username and password of your existing account on our website. Once verified, it will linked to your %s ID", 'wordpress-social-login' ), ucfirst( $provider ) ) ; ?>.</p>
 								</td>
 							</tr>
 							<tr>
 								<td valign="bottom"  width="50%" style="text-align:left;">
 									<label>
-										<?php _wsl_e( "Username", 'wordpress-social-login' ); ?>
+										<?php _e( "Username", 'wordpress-social-login' ); ?>
 										<br />
 										<input type="text" name="user_login" class="input" value=""  size="25" placeholder="" />
 									</label>
 
 									<label>
-										<?php _wsl_e( "Password", 'wordpress-social-login' ); ?>
+										<?php _e( "Password", 'wordpress-social-login' ); ?>
 										<br />
 										<input type="password" name="user_password" class="input" value="" size="25" placeholder="" />
 									</label>
 
-									<input type="submit" value="<?php _wsl_e( "Continue", 'wordpress-social-login' ); ?>" class="button-primary" >
+									<input type="submit" value="<?php _e( "Continue", 'wordpress-social-login' ); ?>" class="button-primary" >
 
-									<a href="javascript:void(0);" onclick="display_mapping_options();" class="back-to-options"><?php _wsl_e( "Back", 'wordpress-social-login' ); ?></a>
+									<a href="javascript:void(0);" onclick="display_mapping_options();" class="back-to-options"><?php _e( "Back", 'wordpress-social-login' ); ?></a>
 								</td>
 							</tr>
 						</table>
@@ -617,17 +617,17 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 							<tr>
 								<td valign="top"  width="50%" style="text-align:center;">
 									<?php if( $linking_enabled == 1 ): ?>
-										<h4><?php _wsl_e( "New to our website", 'wordpress-social-login' ); ?>?</h4>
+										<h4><?php _e( "New to our website", 'wordpress-social-login' ); ?>?</h4>
 									<?php endif; ?>
 
-									<p><?php printf( _wsl__( "Please fill in your information in the form below. Once completed, you will be able to automatically sign into our website through your %s ID", 'wordpress-social-login' ), $provider_name ); ?>.</p>
+									<p><?php printf( __( "Please fill in your information in the form below. Once completed, you will be able to automatically sign into our website through your %s ID", 'wordpress-social-login' ), $provider_name ); ?>.</p>
 								</td>
 							</tr>
 							<tr>
 								<td valign="bottom"  width="50%" style="text-align:left;">
 									<?php if( $change_username == 1 ): ?>
 										<label>
-											<?php _wsl_e( "Username", 'wordpress-social-login' ); ?>
+											<?php _e( "Username", 'wordpress-social-login' ); ?>
 											<br />
 											<input type="text" name="user_login" class="input" value="<?php echo $requested_user_login; ?>" size="25" placeholder="" />
 										</label>
@@ -635,7 +635,7 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 
 									<?php if( $require_email == 1 && empty( $requested_user_email ) ): ?>
 										<label>
-											<?php _wsl_e( "E-mail", 'wordpress-social-login' ); ?>
+											<?php _e( "E-mail", 'wordpress-social-login' ); ?>
 											<br />
 											<input type="text" name="user_email" class="input" value="<?php echo $requested_user_email; ?>" size="25" placeholder="" />
 										</label>
@@ -655,10 +655,10 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 										}
 									?>
 
-									<input type="submit" value="<?php _wsl_e( "Continue", 'wordpress-social-login' ); ?>" class="button-primary" >
+									<input type="submit" value="<?php _e( "Continue", 'wordpress-social-login' ); ?>" class="button-primary" >
 
 									<?php if( $linking_enabled == 1 ): ?>
-										<a href="javascript:void(0);" onclick="display_mapping_options();" class="back-to-options"><?php _wsl_e( "Back", 'wordpress-social-login' ); ?></a>
+										<a href="javascript:void(0);" onclick="display_mapping_options();" class="back-to-options"><?php _e( "Back", 'wordpress-social-login' ); ?></a>
 									<?php endif; ?>
 								</td>
 							</tr>
@@ -673,7 +673,7 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
             </div>
 
 			<p class="back-to-home">
-				<a href="<?php echo home_url(); ?>">&#8592; <?php printf( _wsl__( "Back to %s", 'wordpress-social-login' ), get_bloginfo('name') ); ?></a>
+				<a href="<?php echo home_url(); ?>">&#8592; <?php printf( __( "Back to %s", 'wordpress-social-login' ), get_bloginfo('name') ); ?></a>
 			</p>
 		</div>
 

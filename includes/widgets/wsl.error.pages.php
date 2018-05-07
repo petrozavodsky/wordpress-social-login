@@ -141,7 +141,7 @@ if( ! function_exists( 'wsl_render_error_page' ) )
 	<head>
 		<meta name="robots" content="NOINDEX, NOFOLLOW">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title><?php bloginfo('name'); ?> - <?php _wsl_e("Oops! We ran into an issue", 'wordpress-social-login') ?>.</title>
+		<title><?php bloginfo('name'); ?> - <?php _e("Oops! We ran into an issue", 'wordpress-social-login') ?>.</title>
 		<style type="text/css">
 			body {
 				background: #f1f1f1;
@@ -222,7 +222,7 @@ if( ! function_exists( 'wsl_render_error_page' ) )
 				</tr>
 
 				<tr>
-					<td align="center"><h4><?php _wsl_e("Oops! We ran into an issue", 'wordpress-social-login') ?>.</h4></td>
+					<td align="center"><h4><?php _e("Oops! We ran into an issue", 'wordpress-social-login') ?>.</h4></td>
 				</tr>
 
 				<tr>
@@ -236,7 +236,7 @@ if( ! function_exists( 'wsl_render_error_page' ) )
 							if( $notes )
 							{
 								?>
-									<p class="error-hint"><?php _wsl_e( $notes, 'wordpress-social-login'); ?></p>
+									<p class="error-hint"><?php _e( $notes, 'wordpress-social-login'); ?></p>
 								<?php
 							}
 						?>
@@ -246,8 +246,8 @@ if( ! function_exists( 'wsl_render_error_page' ) )
 				<tr>
 					<td>
 						<p style="padding: 0;">
-							<a href="javascript:xi();" style="float:right"><?php _wsl_e("Details", 'wordpress-social-login') ?></a>
-							<a href="<?php echo home_url(); ?>" style="float:left">&xlarr; <?php _wsl_e("Back to home", 'wordpress-social-login') ?></a>
+							<a href="javascript:xi();" style="float:right"><?php _e("Details", 'wordpress-social-login') ?></a>
+							<a href="<?php echo home_url(); ?>" style="float:left">&xlarr; <?php _e("Back to home", 'wordpress-social-login') ?></a>
 						</p>
 
 						<br style="clear:both;" />
@@ -296,7 +296,7 @@ function wsl_render_error_page_debug_section( $php_exception = null )
 <br />
 
 <small>
-	<?php _wsl_e("<strong>Note:</strong> This debugging area can be disabled from the plugin settings by setting <b>Development mode</b> to <b>Disabled</b>", 'wordpress-social-login'); ?>.
+	<?php _e("<strong>Note:</strong> This debugging area can be disabled from the plugin settings by setting <b>Development mode</b> to <b>Disabled</b>", 'wordpress-social-login'); ?>.
 </small>
 <?php
 }

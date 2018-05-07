@@ -32,23 +32,23 @@ function wsl_component_buddypress_notfound()
 }
 </style>
 <div id="wsl_div_warn">
-	<h3 style="margin:0px;"><?php _wsl_e("BuddyPress plugin not found!", 'wordpress-social-login') ?></h3> 
+	<h3 style="margin:0px;"><?php _e("BuddyPress plugin not found!", 'wordpress-social-login') ?></h3>
 
 	<hr />
 
 	<p>
-		<?php _wsl_e('<a href="https://buddypress.org/" target="_blank">BuddyPress</a> was not found on your website. The plugin is be either not installed or disabled', 'wordpress-social-login') ?> .
+		<?php _e('<a href="https://buddypress.org/" target="_blank">BuddyPress</a> was not found on your website. The plugin is be either not installed or disabled', 'wordpress-social-login') ?> .
 	</p>
 
 	<p>
-		<?php _wsl_e("If you believe you've found a problem with <b>WordPress Social Login</b>, be sure to let us know so we can fix it", 'wordpress-social-login') ?>.
+		<?php _e("If you believe you've found a problem with <b>WordPress Social Login</b>, be sure to let us know so we can fix it", 'wordpress-social-login') ?>.
 	</p>
 
 	<hr />
 
 	<div>
-		<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/support.html" target="_blank"><?php _wsl_e( "Report as bug", 'wordpress-social-login' ) ?></a>
-		<a class="button-primary" href="options-general.php?page=wordpress-social-login&wslp=components" style="float:<?php if( is_rtl() ) echo 'left'; else echo 'right'; ?>"><?php _wsl_e( "Check enabled components", 'wordpress-social-login' ) ?></a>
+		<a class="button-secondary" href="http://miled.github.io/wordpress-social-login/support.html" target="_blank"><?php _e( "Report as bug", 'wordpress-social-login' ) ?></a>
+		<a class="button-primary" href="options-general.php?page=wordpress-social-login&wslp=components" style="float:<?php if( is_rtl() ) echo 'left'; else echo 'right'; ?>"><?php _e( "Check enabled components", 'wordpress-social-login' ) ?></a>
 	</div> 
 </div>
 <?php

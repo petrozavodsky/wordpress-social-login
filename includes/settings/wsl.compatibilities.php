@@ -45,7 +45,7 @@ function wsl_update_compatibilities()
 
 	if( ! get_option( 'wsl_settings_connect_with_label' ) )
 	{
-		update_option( 'wsl_settings_connect_with_label', _wsl__("Connect with:", 'wordpress-social-login') );
+		update_option( 'wsl_settings_connect_with_label', __("Connect with:", 'wordpress-social-login') );
 	}
 
 	if( ! get_option( 'wsl_settings_users_avatars' ) )
@@ -121,7 +121,7 @@ function wsl_update_compatibilities()
 
 	if( ! get_option( 'wsl_settings_bouncer_new_users_restrict_domain_text_bounce' ) )
 	{
-		update_option( 'wsl_settings_bouncer_new_users_restrict_domain_text_bounce', _wsl__("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
+		update_option( 'wsl_settings_bouncer_new_users_restrict_domain_text_bounce', __("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
 	}
 
 	if( ! get_option( 'wsl_settings_bouncer_new_users_restrict_email_enabled' ) )
@@ -131,7 +131,7 @@ function wsl_update_compatibilities()
 
 	if( ! get_option( 'wsl_settings_bouncer_new_users_restrict_email_text_bounce' ) )
 	{
-		update_option( 'wsl_settings_bouncer_new_users_restrict_email_text_bounce', _wsl__("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
+		update_option( 'wsl_settings_bouncer_new_users_restrict_email_text_bounce', __("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
 	}
 
 	if( ! get_option( 'wsl_settings_bouncer_new_users_restrict_profile_enabled' ) )
@@ -141,7 +141,7 @@ function wsl_update_compatibilities()
 
 	if( ! get_option( 'wsl_settings_bouncer_new_users_restrict_profile_text_bounce' ) )
 	{
-		update_option( 'wsl_settings_bouncer_new_users_restrict_profile_text_bounce', _wsl__("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
+		update_option( 'wsl_settings_bouncer_new_users_restrict_profile_text_bounce', __("<strong>This website is restricted to invited readers only.</strong><p>It doesn't look like you have been invited to access this site. If you think this is a mistake, you might want to contact the website owner and request an invitation.<p>", 'wordpress-social-login') );
 	}
 
 	# contacts import

@@ -35,7 +35,7 @@ if( ! function_exists( 'wsl_render_redirect_to_provider_loading_screen' ) )
 	<head>
 		<meta name="robots" content="NOINDEX, NOFOLLOW">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title><?php _wsl_e("Redirecting...", 'wordpress-social-login') ?> - <?php bloginfo('name'); ?></title>
+		<title><?php _e("Redirecting...", 'wordpress-social-login') ?> - <?php bloginfo('name'); ?></title>
 		<style type="text/css">
 			html {
 				background: #f1f1f1;
@@ -79,7 +79,7 @@ if( ! function_exists( 'wsl_render_redirect_to_provider_loading_screen' ) )
 			<tr>
 				<td align="center">
 					<div>
-						<?php echo sprintf( _wsl__( "Contacting <b>%s</b>, please wait...", 'wordpress-social-login'), _wsl__( ucfirst( $provider ), 'wordpress-social-login') )  ?>
+						<?php echo sprintf( __( "Contacting <b>%s</b>, please wait...", 'wordpress-social-login'), __( ucfirst( $provider ), 'wordpress-social-login') )  ?>
 					</div>
 				</td>
 			</tr>
@@ -117,7 +117,7 @@ if( ! function_exists( 'wsl_render_return_from_provider_loading_screen' ) )
 	<head>
 		<meta name="robots" content="NOINDEX, NOFOLLOW">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title><?php _wsl_e("Redirecting...", 'wordpress-social-login') ?> - <?php bloginfo('name'); ?></title>
+		<title><?php _e("Redirecting...", 'wordpress-social-login') ?> - <?php bloginfo('name'); ?></title>
 		<style type="text/css">
 			html {
 				background: #f1f1f1;
@@ -184,7 +184,7 @@ if( ! function_exists( 'wsl_render_return_from_provider_loading_screen' ) )
 			<tr>
 				<td align="center">
 					<div>
-						<?php echo _wsl_e( "Processing, please wait...", 'wordpress-social-login');  ?>
+						<?php echo _e( "Processing, please wait...", 'wordpress-social-login');  ?>
 					</div>
 				</td>
 			</tr>

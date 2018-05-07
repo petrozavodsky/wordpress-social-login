@@ -40,20 +40,20 @@ function wsl_component_networks_sidebar_what_is_this()
 ?>
 <div class="postbox">
 	<div class="inside">
-		<h3><?php _wsl_e("Welcome to WordPress Social Login", 'wordpress-social-login') ?></h3>
+		<h3><?php _e("Welcome to WordPress Social Login", 'wordpress-social-login') ?></h3>
 
 		<div style="padding:0 20px;">
 			<p style="padding:0;margin:12px 0;">
-				<?php _wsl_e('<b>WordPress Social Login</b> allows your website visitors and customers to register on using their existing social account ID, eliminating the need to fill out registration forms and remember usernames and passwords', 'wordpress-social-login') ?>.
+				<?php _e('<b>WordPress Social Login</b> allows your website visitors and customers to register on using their existing social account ID, eliminating the need to fill out registration forms and remember usernames and passwords', 'wordpress-social-login') ?>.
 			</p>
 			<p style="padding:0;margin:0 0 12px;">
-				<?php _wsl_e('<b>WordPress Social Login</b> come with a number of useful <b><a href="options-general.php?page=wordpress-social-login&wslp=components">Components</a></b> or add-ons that can be essential for your needs', 'wordpress-social-login') ?>.
+				<?php _e('<b>WordPress Social Login</b> come with a number of useful <b><a href="options-general.php?page=wordpress-social-login&wslp=components">Components</a></b> or add-ons that can be essential for your needs', 'wordpress-social-login') ?>.
 			</p>
 			<p style="padding:0;margin:0 0 12px;">
-				<?php _wsl_e('If you are still new to things, we recommend that you read the <b><a href="http://miled.github.io/wordpress-social-login/documentation.html" target="_blank">WSL Documentation</a></b> and to make sure your server meet the minimum system requirements by running <b><a href="http://hybridauth.com/hawp4/wp-admin/options-general.php?page=wordpress-social-login&wslp=tools">WSL Diagnostics</a></b>', 'wordpress-social-login') ?>.
+				<?php _e('If you are still new to things, we recommend that you read the <b><a href="http://miled.github.io/wordpress-social-login/documentation.html" target="_blank">WSL Documentation</a></b> and to make sure your server meet the minimum system requirements by running <b><a href="http://hybridauth.com/hawp4/wp-admin/options-general.php?page=wordpress-social-login&wslp=tools">WSL Diagnostics</a></b>', 'wordpress-social-login') ?>.
 			</p>
 			<p style="padding:0;margin:0 0 12px;">
-				<?php _wsl_e('If you run into any issue, then refer to <b><a href="http://miled.github.io/wordpress-social-login/support.html" target="_blank">Help &amp; Support</a></b>', 'wordpress-social-login') ?>.
+				<?php _e('If you run into any issue, then refer to <b><a href="http://miled.github.io/wordpress-social-login/support.html" target="_blank">Help &amp; Support</a></b>', 'wordpress-social-login') ?>.
 			</p>
 		</div>
 	</div>
@@ -73,11 +73,11 @@ function wsl_component_networks_sidebar_add_more_idps()
 ?>
 <div class="postbox">
 	<div class="inside">
-		<h3><?php _wsl_e("Add more providers", 'wordpress-social-login') ?></h3>
+		<h3><?php _e("Add more providers", 'wordpress-social-login') ?></h3>
 
 		<div style="padding:0 20px;">
 			<p style="padding:0;margin:0 0 12px;">
-				<?php _wsl_e('We have enabled <b>Facebook</b>, <b>Google</b> and <b>Twitter</b> by default, however you may add even more. <b>Just Click</b> on the icons and we will guide you through', 'wordpress-social-login') ?>.
+				<?php _e('We have enabled <b>Facebook</b>, <b>Google</b> and <b>Twitter</b> by default, however you may add even more. <b>Just Click</b> on the icons and we will guide you through', 'wordpress-social-login') ?>.
 			</p>
 
 			<div style="width: 320px; padding: 10px; border: 1px solid #ddd; background-color: #fff;">
@@ -106,7 +106,7 @@ function wsl_component_networks_sidebar_add_more_idps()
 
 					if( $nb_used == count( $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG ) )
 					{
-						_wsl_e("Well! none left.", 'wordpress-social-login');
+						_e("Well! none left.", 'wordpress-social-login');
 					}
 				?>
 			</div>
@@ -128,7 +128,7 @@ function wsl_component_networks_sidebar_basic_insights()
 ?>
 <div class="postbox">
 	<div class="inside">
-		<h3><?php _wsl_e("Insights", 'wordpress-social-login') ?></h3>
+		<h3><?php _e("Insights", 'wordpress-social-login') ?></h3>
 
 		<div style="padding:0 20px">
 			<?php
@@ -140,16 +140,16 @@ function wsl_component_networks_sidebar_basic_insights()
 					$users_conversion = ( 100 * $total_users_wsl ) / $total_users;
 					?>
 						<!-- Insights - conversions -->
-						<h4 style="border-bottom:1px solid #ccc"><?php _wsl_e("Conversions", 'wordpress-social-login') ?></h4>
+						<h4 style="border-bottom:1px solid #ccc"><?php _e("Conversions", 'wordpress-social-login') ?></h4>
 						<table width="90%">
 							<tr>
-								<td width="60%"><?php _wsl_e("WP users", 'wordpress-social-login') ?></td><td><?php echo $total_users; ?></td>
+								<td width="60%"><?php _e("WP users", 'wordpress-social-login') ?></td><td><?php echo $total_users; ?></td>
 							</tr>
 							<tr>
-								<td><?php _wsl_e("WSL users", 'wordpress-social-login') ?></td><td><?php echo $total_users_wsl; ?></td>
+								<td><?php _e("WSL users", 'wordpress-social-login') ?></td><td><?php echo $total_users_wsl; ?></td>
 							</tr>
 							<tr>
-								<td><?php _wsl_e("Conversions", 'wordpress-social-login') ?></td><td style="border-top:1px solid #ccc">+<b><?php echo number_format($users_conversion, 2, '.', ''); ?></b> %</td>
+								<td><?php _e("Conversions", 'wordpress-social-login') ?></td><td style="border-top:1px solid #ccc">+<b><?php echo number_format($users_conversion, 2, '.', ''); ?></b> %</td>
 							</tr>
 						</table>
 
@@ -157,7 +157,7 @@ function wsl_component_networks_sidebar_basic_insights()
 						<?php
 							$data = wsl_get_stored_hybridauth_user_profiles_count_by_field( 'provider' );
 						?>
-						<h4 style="border-bottom:1px solid #ccc"><?php _wsl_e("By provider", 'wordpress-social-login') ?></h4>
+						<h4 style="border-bottom:1px solid #ccc"><?php _e("By provider", 'wordpress-social-login') ?></h4>
 						<table width="90%">
 							<?php
 								$total_profiles_wsl = 0;
@@ -166,7 +166,7 @@ function wsl_component_networks_sidebar_basic_insights()
 								?>
 									<tr>
 										<td width="60%">
-											<img src="<?php echo $assets_base_url . strtolower( $item->provider ) . '.png' ?>" style="vertical-align:top;width:16px;height:16px;" /> <?php _wsl_e($item->provider, 'wordpress-social-login') ?>
+											<img src="<?php echo $assets_base_url . strtolower( $item->provider ) . '.png' ?>" style="vertical-align:top;width:16px;height:16px;" /> <?php _e($item->provider, 'wordpress-social-login') ?>
 										</td>
 										<td>
 											<?php echo $item->items; ?>
@@ -177,10 +177,10 @@ function wsl_component_networks_sidebar_basic_insights()
 								}
 							?>
 							<tr>
-								<td align="right">&nbsp;</td><td style="border-top:1px solid #ccc"><b><?php echo $total_profiles_wsl; ?></b> <?php _wsl_e("WSL profiles", 'wordpress-social-login') ?></td>
+								<td align="right">&nbsp;</td><td style="border-top:1px solid #ccc"><b><?php echo $total_profiles_wsl; ?></b> <?php _e("WSL profiles", 'wordpress-social-login') ?></td>
 							</tr>
 							<tr>
-								<td align="right">&nbsp;</td><td><b><?php echo $total_users_wsl; ?></b> <?php _wsl_e("WSL users", 'wordpress-social-login') ?></td>
+								<td align="right">&nbsp;</td><td><b><?php echo $total_users_wsl; ?></b> <?php _e("WSL users", 'wordpress-social-login') ?></td>
 							</tr>
 						</table>
 
@@ -188,7 +188,7 @@ function wsl_component_networks_sidebar_basic_insights()
 						<?php
 							$data = wsl_get_stored_hybridauth_user_profiles_count_by_field( 'gender' );
 						?>
-						<h4 style="border-bottom:1px solid #ccc"><?php _wsl_e("By gender", 'wordpress-social-login') ?></h4>
+						<h4 style="border-bottom:1px solid #ccc"><?php _e("By gender", 'wordpress-social-login') ?></h4>
 						<table width="90%">
 							<?php
 								foreach( $data as $item ){
@@ -211,7 +211,7 @@ function wsl_component_networks_sidebar_basic_insights()
 						<?php
 							$data = wsl_get_stored_hybridauth_user_profiles_count_by_field( 'age' );
 						?>
-						<h4 style="border-bottom:1px solid #ccc"><?php _wsl_e("By age", 'wordpress-social-login') ?></h4>
+						<h4 style="border-bottom:1px solid #ccc"><?php _e("By age", 'wordpress-social-login') ?></h4>
 						<table width="90%">
 							<?php
 								foreach( $data as $item ){
@@ -235,7 +235,7 @@ function wsl_component_networks_sidebar_basic_insights()
 				{
 					?>
 						<p>
-							<?php _wsl_e("There's no data yet", 'wordpress-social-login') ?>.
+							<?php _e("There's no data yet", 'wordpress-social-login') ?>.
 						</p>
 					<?php
 				}
