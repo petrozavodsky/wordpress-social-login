@@ -100,7 +100,7 @@ if( ! function_exists( 'wsl_render_redirect_to_provider_loading_screen' ) )
 */
 if( ! function_exists( 'wsl_render_return_from_provider_loading_screen' ) )
 {
-	function wsl_render_return_from_provider_loading_screen( $provider, $authenticated_url, $redirect_to, $wsl_settings_use_popup )
+	function wsl_render_return_from_provider_loading_screen( $provider, $authenticated_url, $redirect_to, $wsl_settings_use_popup , $request )
 	{
 		/*
 		* If Authentication display is undefined or eq Popup ($wsl_settings_use_popup==1)
@@ -110,8 +110,9 @@ if( ! function_exists( 'wsl_render_return_from_provider_loading_screen' ) )
 		* If Authentication display eq In Page ($wsl_settings_use_popup==2)
 		* > create a from in page then submit it to wp-login.php with action=wordpress_social_authenticated
 		*/
-
-		$assets_base_url  = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . 'assets/img/';
+	$authenticated_url = apply_filters('wsl_authenticated_url_api_helper' ,$authenticated_url  ,$request);
+	$redirect_to = apply_filters('wsl_redirect_to_url_api_helper' ,$redirect_to , $request );
+	$assets_base_url  = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . 'assets/img/';
 ?>
 <!DOCTYPE html>
 	<head>
@@ -191,7 +192,7 @@ if( ! function_exists( 'wsl_render_return_from_provider_loading_screen' ) )
 		</table>
 
 		<form name="loginform" method="post" action="<?php echo $authenticated_url; ?>">
-			<input type="hidden" id="redirect_to" name="redirect_to" value="<?php echo esc_url( $redirect_to ); ?>">
+			<input type="hidden" id="redirect_to" name="redirect_to" value="<?php echo esc_url( $redirect_to  ); ?>">
 			<input type="hidden" id="provider" name="provider" value="<?php echo $provider ?>">
 			<input type="hidden" id="action" name="action" value="wordpress_social_authenticated">
 		</form>

@@ -183,7 +183,7 @@ function wsl_process_login_begin() {
 	if ( ! isset( $_REQUEST["redirect_to_provider"] ) ) {
 		do_action( 'wsl_clear_user_php_session' );
 
-		return wsl_render_redirect_to_provider_loading_screen( $provider );
+		return wsl_render_redirect_to_provider_loading_screen( $provider  );
 	}
 
 	/*  2. Build the hybridauth config for the selected provider (keys, scope, etc) */
@@ -241,13 +241,13 @@ function wsl_process_login_begin() {
 	);
 
 	$authenticated_url = add_query_arg(
-$authenticated_url_args ,
+		$authenticated_url_args ,
 		site_url( 'wp-login.php', 'login_post' )
 	);
 
 
 	// display a loading screen
-	return wsl_render_return_from_provider_loading_screen( $provider, $authenticated_url, $redirect_to, $wsl_settings_use_popup );
+	return wsl_render_return_from_provider_loading_screen( $provider, $authenticated_url, $redirect_to, $wsl_settings_use_popup, $_REQUEST );
 }
 
 // --------------------------------------------------------------------
@@ -821,7 +821,7 @@ function wsl_process_login_authenticate_wp_user( $user_id, $provider, $redirect_
 	// Display WSL debugging instead of redirecting the user
 	// > this will give a complete report on what wsl did : database queries and fired hooks
 	// wsl_display_dev_mode_debugging_area(); die(); // ! keep this line commented unless you know what you are doing :)
-
+	do_action('wsl_clear_user_logeded' , $user_id);
 	// That's it. We done.
 	wp_safe_redirect( $redirect_to );
 
